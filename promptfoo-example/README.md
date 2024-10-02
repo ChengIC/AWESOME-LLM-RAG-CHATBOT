@@ -1,4 +1,4 @@
-# Prompt Testing with Promptfoo
+# Test LLM with Promptfoo
 The simple example of testing prompts with promptfoo. 
 
 ![Screenshot](./Screenshot.png)
