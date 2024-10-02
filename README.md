@@ -17,4 +17,4 @@ A collection of LLM, RAG, and chatbot projects that are open-source and can be u
 - [promptfoo](https://github.com/promptfoo/promptfoo)
 
 ## II. Examples
-- Test LLM with Promptfoo [promptfoo](./promptfoo-example/README.md)
+- Test LLM with [Promptfoo](./promptfoo-example/README.md)
