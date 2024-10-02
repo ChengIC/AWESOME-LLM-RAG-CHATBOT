@@ -6,12 +6,12 @@ The simple example of testing prompts with promptfoo.
 As we can see, evaluating LLMs is very similar to test-driven development in software. In fact, we can test not only the responses to prompts but also the configurations related to the providers.
 
 ## Quick Start
-- [ ] Install `npm` on your machine
-- [ ] Install promptfoo `npm install -g promptfoo` at your project root
-- [ ] Initialize promptfoo `promptfoo init`
+- [ ] **Install Node.js and npm.** Refer to [installation guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [ ] **Install promptfoo** at your project directory using command `npm install -g promptfoo`.  
+- [ ] **Initialize promptfoo** at your project directory using command `promptfoo init`.
 
 1. Create a prompt file, e.g. `prompt1.txt`. Make sure the variable is wrapped in `{{}}`.
-2. Modify `promptfooconfig.yaml` to add your prompt file. In this example, I tested the response of a LLM-RAG API built with Django and hosted at `http://127.0.0.1:3002` with endpoint `POST /api/chat-gpt`. The test is to check if the response contains the capital of the country. 
+2. Modify `promptfooconfig.yaml` to add your prompt file. In this example, I tested the response of a LLM-RAG API built with Django and hosted at `http://127.0.0.1:3002` with endpoint `POST /api/chat-gpt`. The test is to check if the response contains the capital of the country. The `promptfooconfig.yaml` should be like this:
 ```yaml
 prompts: [prompt1.txt]
 providers:
@@ -38,7 +38,7 @@ tests:
       - type: contains
         value: 'Washington, D.C.'
 ```
-3. Run `promptfoo eval --no-cache ` to test your prompt. Alternatively, you can run `promptfoo view` to operate the test in the browser.
+3. Run `promptfoo eval --no-cache` to test your prompt. Alternatively, you can run `promptfoo view` to operate the test in the browser.
 
 ## Reference
 - [Official documentation](https://www.promptfoo.dev/docs/intro/)
