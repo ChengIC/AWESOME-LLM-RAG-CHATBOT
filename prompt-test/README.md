@@ -5,12 +5,11 @@ The simple example of testing prompts with promptfoo.
 
 As we can see, evaluating LLMs is very similar to test-driven development in software. In fact, we can test not only the responses to prompts but also the configurations related to the providers.
 
-## Setup
+## Quick Start
 - [ ] Install `npm` on your machine
 - [ ] Install promptfoo `npm install -g promptfoo` at your project root
 - [ ] Initialize promptfoo `promptfoo init`
 
-## Steps
 1. Create a prompt file, e.g. `prompt1.txt`. Make sure the variable is wrapped in `{{}}`.
 2. Modify `promptfooconfig.yaml` to add your prompt file. In this example, I tested the response of a LLM-RAG API built with Django and hosted at `http://127.0.0.1:3002` with endpoint `POST /api/chat-gpt`. The test is to check if the response contains the capital of the country. 
 ```yaml
