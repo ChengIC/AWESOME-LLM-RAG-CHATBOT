@@ -1,0 +1,24 @@
+prompts: [prompt1.txt]
+providers:
+  - id: 'http://127.0.0.1:3002/api/chat-gpt'
+    config:
+      method: 'POST'
+      headers:
+        'Content-Type': 'application/json'
+        'Authorization': 'Token '
+      body:
+        prompt: '{{prompt}}'
+      responseParser: 'json.text'
+test:
+  - description: 'Test the capital of the UK'
+    vars:
+      country: 'UK'
+    assert:
+      - type: contains
+        value: 'London'
+  - description: 'Test the capital of the USA'
+    vars:
+      country: 'USA'
+    assert:
+      - type: contains
+        value: 'Washington, D.C.'
