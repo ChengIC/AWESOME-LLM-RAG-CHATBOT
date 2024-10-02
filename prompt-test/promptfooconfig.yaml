@@ -9,7 +9,7 @@ providers:
       body:
         prompt: '{{prompt}}'
       responseParser: 'json.text'
-test:
+tests:
   - description: 'Test the capital of the UK'
     vars:
       country: 'UK'
