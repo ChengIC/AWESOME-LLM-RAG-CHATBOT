@@ -1,5 +1,5 @@
 # Test LLM with Promptfoo
-The simple example of testing prompts with promptfoo. 
+The simple example of testing prompts with [promptfoo](https://www.promptfoo.dev/).
 
 ![Screenshot](./Screenshot.png)
 
