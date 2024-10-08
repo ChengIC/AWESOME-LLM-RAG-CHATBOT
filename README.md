@@ -7,6 +7,8 @@ A collection of LLM, RAG, and chatbot projects that are open-source and can be u
 - [lobe-chat](https://github.com/lobehub/lobe-chat)
 - [kotaemon](https://github.com/Cinnamon/kotaemon)
 - [Verba](https://github.com/weaviate/Verba)
+- [libre-chat](https://github.com/danny-avila/LibreChat)
+
 ### Frameworks
 - [LangChain](https://github.com/langchain-ai/langchain)
 - [LlamaIndex](https://github.com/run-llama/llama_index)
