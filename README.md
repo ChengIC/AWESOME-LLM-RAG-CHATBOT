@@ -1,7 +1,7 @@
 # Awesome LLM, RAG and Chatbot
 A collection of LLM, RAG, and chatbot projects that are open-source and can be used commercially. I have tested all the example projects below and highly recommend them, not only for developers but also for beginners.
 
-## I. Collections
+## Awesome Collections
 ### Applications
 - [open-webui](https://github.com/open-webui/open-webui)
 - [lobe-chat](https://github.com/lobehub/lobe-chat)
@@ -15,8 +15,10 @@ A collection of LLM, RAG, and chatbot projects that are open-source and can be u
 - [Haystack](https://github.com/deepset-ai/haystack)
 - [ragflow](https://github.com/infiniflow/ragflow)
 - [Structured LLM Outputs](https://github.com/jxnl/instructor)
+
 ### Evaluation
 - [promptfoo](https://github.com/promptfoo/promptfoo)
 
-## II. Examples
-- Test LLM with [Promptfoo](./promptfoo-example/README.md)
+## My own projects
+- [Test LLM with Promptfoo](./promptfoo-example/README.md)
+- [Fine-tuning LLMs](./LLM-finetuning/README.md)
