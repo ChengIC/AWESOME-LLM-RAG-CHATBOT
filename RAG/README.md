@@ -1,53 +1,24 @@
-# LLM Fine-tuning
-In this repository, I will highlight the mainstream methods for fine-tuning LLMs, focusing only on their implementation instead of doing scientific research. Fine-tuning involves training a subset of the parameters of a large pre-trained model to better align with a specific task or dataset. Therefore, fine-tuning can be viewed as a specialized form of training.
+# RAG (Retrieval Augmented Generation)
 
-## I. Prerequisites
-The LLM is trained on a large corpus of data to learn to predict the next tokens from the previous tokens by using the attention mechanism. This self-supervised process is also known as **Pre-training**, which requires a very large amount of data and a lot of computational resources. 
+## Introduction
+RAG is a technique in which we use a large language model (LLM) to generate a response to a user query. The LLM uses the user query to search for relevant documents in a vector database. The LLM then uses the relevant documents to generate a response to the user query.
 
-However, only a few companies (e.g. OpenAI, Google, Meta, etc.) can afford to pre-train their own LLMs due to the high cost. Fortunately, we can leverage the some open-source pre-trained LLMs without the need to train from scratch. Therefore, I provide the following resources to help you understand the basic concepts of transformer models. 
+## When to use RAG vs Fine-tuning?
+- Choose **fine-tuning**: 
+  - Customize the structure or tone of style of the response
+  - Teach a model very complex instruction
 
-- Basic Concepts
-  - [ ] Word Embedding
-  - [ ] Positional Embedding
-  - [ ] Self-Attention Mechanism: Query, Key, Value
-  - [ ] Masked Self-Attention
-  - [ ] Residual Connection
-  - [ ] Encoder-Decoder Attention
-- Transformers 
-  - [Tutorial Video](https://www.youtube.com/watch?v=zxQyTK8quyY&t=1550s)
-- Decoder-only Transformer 
-  - [Tutorial Video](https://www.youtube.com/watch?v=bQ5BoolX9Ag)
-  - [Demo Notebook](https://github.com/ChengIC/pytorch_tutorials/blob/main/section14_transformers/solutions/Pytorch2_Transformer_Text_Generation.ipynb)
-- BERT
+- Choose **RAG**:
+  - When you just need the specific information to answer the user query
+  - Have limited computational resources
+  - Reduce hallucination
 
-## II. Fine-tuning Methods
-After pre-training the LLM, we usually face the following issues:
-- **Human preferences**: The pre-trained LLM may not align with human preferences due to the data bias.
-- **Task-specific**: The pre-trained LLM may not perform well on a specific task or scenario.
+The analogy for choosing between RAG and fine-tuning is like long-term memory vs short-term memory. However, they are not mutually exclusive and can be used together.
 
-The following methods are designed to address the above mentioned issues:
+## Fine-tuning Model + RAG
+A typical workflow is to fine-tune a model to understand the complext instructions. Then use RAG to provide the specific knowledge. The benefit is that you can use less tokens in the prompt and have more space for the retrieval context. 
 
-### Parameter-Efficient Fine-Tuning
-  - [Hugging Face PEFT Implementations](https://huggingface.co/blog/peft)
-  - LoRA
-    - [Blogs](https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms?utm_source=profile&utm_medium=reader2)
-
-  - Prompt Tuning
-  - P-tuning v2 (Prefix-tuning)
-  - P-tuning
-
-### Instruction Fine-tuning
-  - [Github](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM)
-
-### RLHF
-  - [Github](https://github.com/raghavc/LLM-RLHF-Tuning-with-PPO-and-DPO) 
-  - [Short Course](https://learn.deeplearning.ai/courses/reinforcement-learning-from-human-feedback/lesson/1/introduction) 
-  - [Google Paper](https://arxiv.org/abs/1706.03741) 
-  - [OpenAI Paper](https://arxiv.org/abs/2203.02155)
-
-### Distillation
-  - [Github](https://github.com/Tebmer/Awesome-Knowledge-Distillation-of-LLMs?tab=readme-ov-file#kd-algorithms)
-
-## III. Recommended Repositories
-- [LLM Fine-tuning](https://github.com/ashishpatel26/LLM-Finetuning)
-- [Pytorch Tutorials](https://github.com/LukeDitria/pytorch_tutorials) 
+## Best Practices for LLM-RAG
+1. Start with prompt engineering and few shot prompting to give the model clear and structured instructions.
+2. Establish a baseline for your proposed solution.
+3. Start small and focus on optimizing fewer high quality training examples.
